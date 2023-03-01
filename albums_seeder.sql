@@ -1,5 +1,7 @@
 USE ymir_kevin;
 
+TRUNCATE albums;
+
 DROP TABLE IF EXISTS albums;
 
 CREATE TABLE IF NOT EXISTS albums (
