@@ -1,7 +1,7 @@
 USE ymir_employees;
 
-SELECT CONCAT(emp_no, ' - ', last_name, ', ', first_name) AS full_name, birth_date AS DOB
-FROM employees
+SELECT CONCAT(e.emp_no, ' - ', e.last_name, ', ', e.first_name) AS full_name, e.birth_date AS DOB
+FROM employees as e
 LIMIT 10;
 
 # select 1 + 1 as 1_plus_1;
