@@ -4,6 +4,7 @@ SELECT CONCAT(emp_no, ' - ', last_name, ', ', first_name) AS full_name, birth_da
 FROM employees
 LIMIT 10;
 
+# select 1 + 1 as 1_plus_1;
 
 # SELECT CONCAT(first_name, ' ', last_name) AS full_name
 # FROM employees
