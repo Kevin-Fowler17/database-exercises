@@ -21,7 +21,12 @@ WHERE year(t.to_date) = 9999 AND de.dept_no = 'd009' AND year(de.to_date) = 9999
 GROUP BY title
 ORDER BY COUNT(title) DESC;
 
-
+SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Department Manager', s.salary AS 'Salary'
+FROM employees as e
+         JOIN dept_manager AS dm ON e.emp_no = dm.emp_no
+         JOIN departments AS d ON dm.dept_no = d.dept_no
+         JOIN salaries AS s ON e.emp_no = s.emp_no
+WHERE year(dm.to_date) = 9999 AND year(s.to_date) = 9999;
 
 
 
